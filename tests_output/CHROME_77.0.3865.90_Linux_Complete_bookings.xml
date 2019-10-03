@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="0"
-            failures="0"
+<testsuites errors="4"
+            failures="1"
             tests="1">
 
   <testsuite name="Complete_bookings"
-    errors="0" failures="0" hostname="" id="" package="Complete_bookings" skipped="0"
-    tests="1" time="32.20" timestamp="">
+    errors="4" failures="1" hostname="" id="" package="Complete_bookings" skipped="2"
+    tests="1" time="87.47" timestamp="">
   
-    <testcase name="Complete Booking by star" classname="Complete_bookings" time="32.20" assertions="1">
+    <testcase name="Complete Booking by star 1" classname="Complete_bookings" time="87.47" assertions="2">
 
-    
+      <failure message="Testing if element &lt;h2&gt; contains text: &#34;High Five!&#34;. Element could not be located in 1000 ms. - expected [0;32m&#34;High Five!&#34;[0m but got: [0;31m&#34;null&#34;[0m">    at Object.Complete Booking by star 1 (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Complete_bookings.js:21:15)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    <failure message="    at Object.Complete Booking by star 1 (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Complete_bookings.js:21:15)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
   
 
   
 
+  
+    
+    <testcase
+      name="Complete Booking by star 2" classname="Complete_bookings">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Complete Booking by star 3" classname="Complete_bookings">
+      <skipped />
+    </testcase>
+    
   
   </testsuite>
 </testsuites>

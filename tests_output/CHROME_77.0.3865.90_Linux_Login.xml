@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="1"
+            tests="2">
+
+  <testsuite name="Login"
+    errors="1" failures="1" hostname="" id="" package="Login" skipped="0"
+    tests="2" time="24.90" timestamp="">
+  
+    <testcase name="Login with right credentials" classname="Login" time="10.08" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Login with fake credentials" classname="Login" time="14.81" assertions="2">
+
+      <failure message="Testing if element &lt;//div[@class=&#34;email-heading sc-ibxdXY gokLSx&#34;]&gt; is visible. Element could not be located in 1000 ms. - expected [0;32m&#34;true&#34;[0m but got: [0;31m&#34;null&#34;[0m">    at Object.Login with fake credentials (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Login.js:24:15)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    <failure message="    at Object.Login with fake credentials (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Login.js:24:15)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
