@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="add_comments"
+    errors="0" failures="1" hostname="" id="" package="add_comments" skipped="9"
+    tests="1" time="30.13" timestamp="">
+  
+    <testcase name="Adding Comments to star videos 1" classname="add_comments" time="30.13" assertions="2">
+
+      <failure message="Timed out while waiting for element &lt;//textarea[@placeholder=&#34;Comment on this video&#34;]&gt; to be present for 5000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+    
+    <testcase
+      name="Adding Comments to star videos 2" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding Comments to star videos 3" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding Comments to star videos 4" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding Comments to star videos 5" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding Comments to star videos 6" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding Comments to star videos 7" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding Comments to star videos 8" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding Comments to star videos 9" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding Comments to star videos 10" classname="add_comments">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

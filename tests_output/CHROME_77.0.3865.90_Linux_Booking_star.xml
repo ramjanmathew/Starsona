@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="7">
+
+  <testsuite name="Booking_star"
+    errors="0" failures="0" hostname="" id="" package="Booking_star" skipped="0"
+    tests="7" time="271.0" timestamp="">
+  
+    <testcase name="Booking Lady Gaga by a fan" classname="Booking_star" time="68.94" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Booking Johnny by a fan" classname="Booking_star" time="41.41" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Booking LionKing by a fan" classname="Booking_star" time="24.05" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Booking Sanjay by a fan" classname="Booking_star" time="29.01" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Booking Kanye by a fan" classname="Booking_star" time="27.54" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Booking Tievo by a fan" classname="Booking_star" time="31.11" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Booking Narcos by a fan" classname="Booking_star" time="48.97" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

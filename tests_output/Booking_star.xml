@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="Booking_star"
+    errors="1" failures="0" hostname="" id="" package="Booking_star" skipped="1"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+
+  
+    
+    <testcase
+      name="Booking Lady Gaga by a fan" classname="Booking_star">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

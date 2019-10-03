@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="5"
+            failures="1"
+            tests="1">
+
+  <testsuite name="Booking_star"
+    errors="5" failures="1" hostname="" id="" package="Booking_star" skipped="0"
+    tests="1" time="57.25" timestamp="">
+  
+    <testcase name="Booking Lady Gaga by a fan" classname="Booking_star" time="57.25" assertions="1">  <failure message="Testing if element &lt;/html[1]/body[1]/div[3]/div[2]/div[1]/section[1]/section[2]/section[1]/div[1]/section[1]/div[1]/div[1]/div[1]/input[1]&gt; is visible. Element could not be located in 1000 ms. - expected [0;32m&#34;true&#34;[0m but got: [0;31m&#34;null&#34;[0m">    at Object.Booking Lady Gaga by a fan (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Booking_star.js:12:15)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    <failure message="    at Object.Booking Lady Gaga by a fan (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Booking_star.js:12:15)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

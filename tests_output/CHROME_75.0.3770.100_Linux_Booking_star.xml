@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="Booking_star"
+    errors="0" failures="0" hostname="" id="" package="Booking_star" skipped="0"
+    tests="1" time="23.43" timestamp="">
+  
+    <testcase name="Booking a star by a fan" classname="Booking_star" time="23.43" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="1"
+            tests="1">
+
+  <testsuite name="Sign_up.Sign_up(fan)"
+    errors="1" failures="1" hostname="" id="" package="Sign_up" skipped="0"
+    tests="1" time="17.88" timestamp="">
+  
+    <testcase name="Sign Up as a fan" classname="Sign_up.Sign_up(fan)" time="17.88" assertions="2">
+
+      <failure message="Testing if element &lt;//div[contains(@class,&#34;success-fan sc-dphlzf hAWyaW&#34;)]&gt; is visible. Element could not be located in 1000 ms. - expected [0;32m&#34;true&#34;[0m but got: [0;31m&#34;null&#34;[0m">    at Object.Sign Up as a fan (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Sign_up/Sign_up(fan).js:17:15)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    <failure message="    at Object.Sign Up as a fan (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Sign_up/Sign_up(fan).js:17:15)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
