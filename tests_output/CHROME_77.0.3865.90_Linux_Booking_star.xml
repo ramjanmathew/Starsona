@@ -5,9 +5,9 @@
 
   <testsuite name="Booking_star"
     errors="0" failures="0" hostname="" id="" package="Booking_star" skipped="0"
-    tests="7" time="179.1" timestamp="">
+    tests="7" time="189.3" timestamp="">
   
-    <testcase name="Booking Lady Gaga by a fan" classname="Booking_star" time="23.01" assertions="4">
+    <testcase name="Booking Lady Gaga by a fan" classname="Booking_star" time="27.58" assertions="4">
 
     
 
@@ -18,7 +18,7 @@
     
     </testcase>
   
-    <testcase name="Booking Johnny by a fan" classname="Booking_star" time="23.26" assertions="4">
+    <testcase name="Booking Johnny by a fan" classname="Booking_star" time="26.14" assertions="4">
 
     
 
@@ -29,7 +29,7 @@
     
     </testcase>
   
-    <testcase name="Booking LionKing by a fan" classname="Booking_star" time="29.94" assertions="4">
+    <testcase name="Booking LionKing by a fan" classname="Booking_star" time="25.54" assertions="4">
 
     
 
@@ -40,7 +40,7 @@
     
     </testcase>
   
-    <testcase name="Booking Sanjay by a fan" classname="Booking_star" time="27.89" assertions="4">
+    <testcase name="Booking Sanjay by a fan" classname="Booking_star" time="27.69" assertions="4">
 
     
 
@@ -51,7 +51,7 @@
     
     </testcase>
   
-    <testcase name="Booking Kanye by a fan" classname="Booking_star" time="24.29" assertions="4">
+    <testcase name="Booking Kanye by a fan" classname="Booking_star" time="25.30" assertions="4">
 
     
 
@@ -62,7 +62,7 @@
     
     </testcase>
   
-    <testcase name="Booking Tievo by a fan" classname="Booking_star" time="25.84" assertions="4">
+    <testcase name="Booking Tievo by a fan" classname="Booking_star" time="26.86" assertions="4">
 
     
 
@@ -73,7 +73,7 @@
     
     </testcase>
   
-    <testcase name="Booking Narcos by a fan" classname="Booking_star" time="24.89" assertions="4">
+    <testcase name="Booking Narcos by a fan" classname="Booking_star" time="30.15" assertions="4">
 
     
 

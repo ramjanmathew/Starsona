@@ -1,69 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
-            tests="1">
+            failures="0"
+            tests="10">
 
   <testsuite name="add_comments"
-    errors="0" failures="1" hostname="" id="" package="add_comments" skipped="9"
-    tests="1" time="31.70" timestamp="">
+    errors="0" failures="0" hostname="" id="" package="add_comments" skipped="0"
+    tests="10" time="249.2" timestamp="">
   
-    <testcase name="Adding Comments to star videos 1" classname="add_comments" time="31.70" assertions="2">
-
-      <failure message="Timed out while waiting for element &lt;//textarea[@placeholder=&#34;Comment on this video&#34;]&gt; to be present for 5000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    <testcase name="Adding Comments to star videos 1" classname="add_comments" time="28.39" assertions="2">
 
     
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 2" classname="add_comments" time="20.97" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 3" classname="add_comments" time="20.53" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 4" classname="add_comments" time="22.78" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 5" classname="add_comments" time="26.22" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 6" classname="add_comments" time="25.95" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 7" classname="add_comments" time="25.55" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 8" classname="add_comments" time="26.03" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 9" classname="add_comments" time="27.52" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Adding Comments to star videos 10" classname="add_comments" time="25.31" assertions="1">
+
+    
     </testcase>
   
 
   
 
-  
-    
-    <testcase
-      name="Adding Comments to star videos 2" classname="add_comments">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Adding Comments to star videos 3" classname="add_comments">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Adding Comments to star videos 4" classname="add_comments">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Adding Comments to star videos 5" classname="add_comments">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Adding Comments to star videos 6" classname="add_comments">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Adding Comments to star videos 7" classname="add_comments">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Adding Comments to star videos 8" classname="add_comments">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Adding Comments to star videos 9" classname="add_comments">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Adding Comments to star videos 10" classname="add_comments">
-      <skipped />
-    </testcase>
-    
   
   </testsuite>
 </testsuites>

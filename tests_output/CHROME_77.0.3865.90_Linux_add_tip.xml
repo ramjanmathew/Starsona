@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="add_tip"
+    errors="0" failures="0" hostname="" id="" package="add_tip" skipped="0"
+    tests="3" time="85.82" timestamp="">
+  
+    <testcase name="Adding $5 Tip to star videos 1" classname="add_tip" time="26.19" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Adding $10 Tip to star videos 1" classname="add_tip" time="28.26" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Adding $20 Tip to star videos 1" classname="add_tip" time="31.37" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
