@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="0"
-            tests="3">
+            failures="1"
+            tests="1">
 
   <testsuite name="add_tip"
-    errors="0" failures="0" hostname="" id="" package="add_tip" skipped="0"
-    tests="3" time="85.82" timestamp="">
+    errors="0" failures="1" hostname="" id="" package="add_tip" skipped="2"
+    tests="1" time="57.73" timestamp="">
   
-    <testcase name="Adding $5 Tip to star videos 1" classname="add_tip" time="26.19" assertions="2">
+    <testcase name="Adding $5 Tip to star videos 1" classname="add_tip" time="57.73" assertions="2">
 
-    
-
-    
-    </testcase>
-  
-    <testcase name="Adding $10 Tip to star videos 1" classname="add_tip" time="28.26" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Adding $20 Tip to star videos 1" classname="add_tip" time="31.37" assertions="2">
-
-    
+      <failure message="Timed out while waiting for element &lt;//span[@class=&#34;log-out&#34;]&gt; to be present for 5000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
 
     
     </testcase>
@@ -31,6 +17,18 @@
 
   
 
+  
+    
+    <testcase
+      name="Adding $10 Tip to star videos 1" classname="add_tip">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Adding $20 Tip to star videos 1" classname="add_tip">
+      <skipped />
+    </testcase>
+    
   
   </testsuite>
 </testsuites>

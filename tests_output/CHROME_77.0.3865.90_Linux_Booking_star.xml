@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="7">
+            tests="1">
 
   <testsuite name="Booking_star"
     errors="0" failures="0" hostname="" id="" package="Booking_star" skipped="0"
-    tests="7" time="189.3" timestamp="">
+    tests="1" time="130.1" timestamp="">
   
-    <testcase name="Booking Lady Gaga by a fan" classname="Booking_star" time="27.58" assertions="4">
+    <testcase name="Booking Star by fan" classname="Booking_star" time="130.1" assertions="28">
 
     
 
@@ -16,9 +16,6 @@
     
 
     
-    </testcase>
-  
-    <testcase name="Booking Johnny by a fan" classname="Booking_star" time="26.14" assertions="4">
 
     
 
@@ -27,9 +24,6 @@
     
 
     
-    </testcase>
-  
-    <testcase name="Booking LionKing by a fan" classname="Booking_star" time="25.54" assertions="4">
 
     
 
@@ -38,9 +32,6 @@
     
 
     
-    </testcase>
-  
-    <testcase name="Booking Sanjay by a fan" classname="Booking_star" time="27.69" assertions="4">
 
     
 
@@ -49,9 +40,6 @@
     
 
     
-    </testcase>
-  
-    <testcase name="Booking Kanye by a fan" classname="Booking_star" time="25.30" assertions="4">
 
     
 
@@ -60,9 +48,6 @@
     
 
     
-    </testcase>
-  
-    <testcase name="Booking Tievo by a fan" classname="Booking_star" time="26.86" assertions="4">
 
     
 
@@ -71,9 +56,6 @@
     
 
     
-    </testcase>
-  
-    <testcase name="Booking Narcos by a fan" classname="Booking_star" time="30.15" assertions="4">
 
     
 

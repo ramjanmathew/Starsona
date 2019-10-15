@@ -1,207 +1,83 @@
+var XLSX = require('xlsx');
+var workbook = XLSX.readFile('/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Comments.xlsx');
+var sheet_name_list = workbook.SheetNames;
+var range = { s: { c: 0, r: 0 }, e: { c: 10, r: 10 } };
+var fan_email = [];
+var star_profile = [];
+var video = [];
 module.exports = {
   'Adding Comments to star videos 1' : function (client) {
+    sheet_name_list.forEach(function(y) {
+      var worksheet = workbook.Sheets[y];
+      for (var R = range.s.r; R <= range.e.r; ++R) 
+      {
+          for (var C = range.s.c; C <= range.e.c; ++C) 
+        {
+            var cell_address = { c: C, r: R };
+            var data = XLSX.utils.encode_cell(cell_address);
+            var z = worksheet[data];
+            
+            if(z == undefined) continue;
+            else
+            {
+            if(data.startsWith('A'))
+          { fan_email.push(worksheet[data].v);
+          }
+          else if(data.startsWith('B')){
+              star_profile.push(worksheet[data].v);
+          }
+          else if(data.startsWith('C')){
+            video.push(worksheet[data].v)
+          }
+        }
+      }
+    }
+    for(var k=0;k<video.length;k++)
+    {
+    for(var j=0;j<fan_email.length;j++)
+    {
+    for(var i=0;i<fan_email.length;i++)
+      {
+        
     client
       .url('https://starsona-dev.qburst.build')
-      .waitForElementVisible('body', 1000)
       .click('xpath','//button[contains(text(),"Log In")]')
-      .setValue('input[name=email]', 'rahulj+1@qburst.com')
-      .setValue('input[name=password]', '1234567@')
       .useXpath()
+      .setValue('//input[@name="email"]', fan_email[j])
+      .setValue('//input[@name="password"]', '1234567@')
       .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
       .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
+      .url(star_profile[i])
       .pause(3000)
-      .click('//div[@id="video-0"]')
-      .moveTo('//div[contains(@class,"sc-dznXNo ghKWgF")]',100,110)
+       .click(video[k])
+          .element('xpath',video[k],function(result){
+            if(result.status !=-1)
+            {
+              client
       .pause(5000)
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Thank you for the video')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-  'Adding Comments to star videos 2' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+2@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
+      .element('xpath', '//textarea[@placeholder="Comment on this video"]', function(result){
+        if(result.status != -1){
+            //Element exists, do something
+            client
+            .setValue('//textarea[@placeholder="Comment on this video"]','Thank you for the video')
+            .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
+            .pause(1000)
+        }
+      });
+      client
+      .click('//span[@class="sc-jTzLTM iiQZkV"]')
+    }
+  });
+  client
+      .click('/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/header[1]/div[1]/div[3]/span[1]/button[1]')
+      .pause(2000)
+      .click('//span[@class="log-out"]')
       .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Awesome')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-  'Adding Comments to star videos 3' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+21@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
-      .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Great Work!!!!')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-    'Adding Comments to star videos 4' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+lion@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
-      .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Great Work!!!!')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-  'Adding Comments to star videos 5' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+johnny@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
-      .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Great Work!!!!')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-  'Adding Comments to star videos 6' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+56@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
-      .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Great Work!!!!')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-  'Adding Comments to star videos 7' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+lady@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
-      .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Great Work!!!!')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-  'Adding Comments to star videos 8' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+kanye@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
-      .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Great Work!!!!')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-  'Adding Comments to star videos 9' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+tievo@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
-      .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Great Work!!!!')
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-'Adding Comments to star videos 10' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .useXpath()
-      .setValue('//input[@name="email"]', 'rahulj+sanjay@qburst.com')
-      .setValue('//input[@name="password"]', '1234567@')
-      .click('//button[contains(@class,"sc-kpOJdX hZbcbm")]')
-      .pause(3000)
-      .url('https://starsona-dev.qburst.build/johnnybravo')
-      .pause(3000)
-      .click('//div[@id="video-0"]')
-      .waitForElementVisible('//textarea[@placeholder="Comment on this video"]')
-      .setValue('//textarea[@placeholder="Comment on this video"]','Great Work!!!!')
-      .moveTo(null,100,110)
-      .click('//*[@class="svg-inline--fa fa-telegram-plane fa-w-14 message-icon comment-icon"]')
-      .pause(1000)
-      .end();
-  },
-  /*'Adding tip to star videos' : function (client) {
-    client
-      .url('https://starsona-dev.qburst.build')
-      .waitForElementVisible('body', 1000)
-      .click('xpath','//button[contains(text(),"Log In")]')
-      .setValue('input[name=email]', 'rahulj+2@qburst.com')
-      .setValue('input[name=password]', '1234567@')
-      .click('button[type=submit]')
-      .pause(3000)
-      .assert.containsText('body','Featured Stars Title')
-      .useXpath()
-      .click('//span[@id="name-ranveersingh-"]')
-      .click('//div[@id="video-0"]')
-      .click('/html/body/div[3]/div[2]/div/div/div/div/div/div[1]/div/div[1]/div/div/div[2]/div[1]/div/div[2]/div[2]/ul/li[3]')
-      .click('//button[@class="sc-eerKOB clrgcQ"]')
-       .click('//li[@class="sc-kqlzXE eZRVCC"]')
-       .click('//button[@class="common-btn button sc-kpOJdX lfXDAS"]')
-       .waitForElementVisible('//button[@class="common-btn browseBtn sc-kpOJdX lfXDAS"]')
-      .pause(1000)
-      .end();
-    }*/
-};
+    }
+  }
+}
+  client
+  .end()
+});
+    }
+}
