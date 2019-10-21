@@ -3,7 +3,6 @@ var workbook = XLSX.readFile('/home/rahul/Documents/Starsona-Automation/Nightwat
 var sheet_name_list = workbook.SheetNames;
 var range = { s: { c: 0, r: 0 }, e: { c: 10, r: 10 } };
 var email = [];
-var booking = [];
 var video = ['/home/rahul/Downloads/Video/Johnny_Bravo_-_Beach_Blanket_Bravo.mp4','/home/rahul/Downloads/Video/Kanye_West__Lil_Pump_ft_Adele_Givens_-_I_Love_It_Official_Music_Video.mp4',
 '/home/rahul/Downloads/Video/Lady_Gaga_Bradley_Cooper_-_Shallow_A_Star_Is_Born.mp4','/home/rahul/Downloads/Video/Love_Action_Drama__Official_Teaser__Nivin_Pauly_Nayanthara__Dhyan_Sreenivasan__Shaan_Rahman_HD.mp4'];
 module.exports = {
@@ -26,17 +25,17 @@ module.exports = {
             if(data.startsWith('D'))
           { email.push(worksheet[data].v);
           }
-          else if(data.startsWith('C')){
-              booking.push(worksheet[data].v);
-          }
         }
       }
     }
+    for(var i=0;i<email.length;i++)
+    {
+      page
+        .completeBookings(email[j])
+        .pause(3000)
 for(var j=0;j<email.length;j++)
     {
-    for(var i=0;i<booking.length;i++)
-      {  page
-        .completeBookings(email[i])
+      page
         .api.element('xpath','/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/span[2]',function(result){
           if(result.status !=-1){
              // element is disabled , do what you want

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
-            failures="0"
+<testsuites errors="6"
+            failures="1"
             tests="1">
 
   <testsuite name="Star_features.Complete_bookings"
-    errors="1" failures="0" hostname="" id="" package="Star_features" skipped="0"
-    tests="1" time="18.60" timestamp="">
+    errors="6" failures="1" hostname="" id="" package="Star_features" skipped="0"
+    tests="1" time="101.1" timestamp="">
   
-    <testcase name="Complete Booking by star 1" classname="Star_features.Complete_bookings" time="18.60" assertions="0">
+    <testcase name="Complete Booking by star 1" classname="Star_features.Complete_bookings" time="101.1" assertions="1">  <failure message="Testing if element &lt;body&gt; contains text: &#34;Personalized Videos From the Stars&#34; in 1000 ms. - expected [0;32m&#34;Personalized Videos From the Stars&#34;[0m but got: [0;31m&#34;&#34;[0m">    at /home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Star_features/Complete_bookings.js:53:17
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Complete Booking by star 1 (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Star_features/Complete_bookings.js:13:21)</failure>
+
+    <failure message="    at /home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Star_features/Complete_bookings.js:53:17">    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Complete Booking by star 1 (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Star_features/Complete_bookings.js:13:21)</failure>
     </testcase>
   
 

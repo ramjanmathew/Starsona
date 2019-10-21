@@ -1,21 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="2"
-            failures="0"
+<testsuites errors="6"
+            failures="1"
             tests="1">
 
   <testsuite name="Booking_Video_Features.add_comments"
-    errors="2" failures="0" hostname="" id="" package="Booking_Video_Features" skipped="0"
-    tests="1" time="0.001000" timestamp="">
+    errors="6" failures="1" hostname="" id="" package="Booking_Video_Features" skipped="0"
+    tests="1" time="258.6" timestamp="">
   
-    <testcase name="Adding Comments to star videos" classname="Booking_Video_Features.add_comments" time="0.001000" assertions="0">
+    <testcase name="Adding Comments to star videos" classname="Booking_Video_Features.add_comments" time="258.6" assertions="17">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Testing if element &lt;body&gt; contains text: &#34;Featured&#34; in 1000 ms. - expected [0;32m&#34;Featured&#34;[0m but got: [0;31m&#34;&#34;[0m">    at /home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Booking_Video_Features/add_comments.js:51:15
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Adding Comments to star videos (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Booking_Video_Features/add_comments.js:15:21)</failure>
+
+    <failure message="    at /home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Booking_Video_Features/add_comments.js:51:15">    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Adding Comments to star videos (/home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Booking_Video_Features/add_comments.js:15:21)</failure>
     </testcase>
   
 
-  
-    <system-err>
-      [0;31m  Error: Cannot read test source location: /home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Comments.xlsx[0m
-[0;90m       at process._tickCallback (internal/process/next_tick.js:68:7)[0m
-    </system-err>
   
 
   

@@ -4,14 +4,14 @@ var workbook = XLSX.readFile('/home/rahul/Documents/Starsona-Automation/Nightwat
 var fan_email = [];
 var star_profile = [];
 var video = [];
+var comment = ['Thank you','Thank you for the video','Best of Luck','Thanks for the headsup','You are the best','You the mvp!!','You rock!!','This is fantastic','This is nice!']
 var sheet_name_list = workbook.SheetNames;
-var obj = require('../page-objects/add_comments_object.js')
 module.exports = {
-  '@tags':['add_comments'],
-  before: function(browser){
-    obj(browser).openBrowser();
-  },
   'Adding Comments to star videos' : function (client) {
+    const page = client.page.add_comments_object();
+    page
+    .navigate()
+    .resizeWindow(1200, 1000)
     sheet_name_list.forEach(function(y) {
 
       worksheet = workbook.Sheets[y];
@@ -39,17 +39,42 @@ module.exports = {
           }
         }
     
-    for(var k=0;k<sheet_objects.fan_email.length;k++)
+    for(var k=0;k<video.length;k++)
     {
-    for(var j=0;j<sheet_objects.fan_email.length;j++)
+    for(var j=0;j<fan_email.length;j++)
     {
-    for(var i=0;i<sheet_objects.fan_email.length;i++)
+      page
+      .login(fan_email[j])
+    for(var i=0;i<fan_email.length;i++)
       {
-    obj(client).addComments();
-    }
+        page
+      .assert.containsText('body','Featured')
+      .api.url(star_profile[i]);
+      page
+      .pause(4000)
+      .api.element('css selector',video[k],function(result){
+        if(result.status !=-1)
+        {  page
+          .click('#video-1')
+          .pause(2000)
+          .api.element('xpath','//textarea[@placeholder="Comment on this video"]',function(result){
+            if(result.status !=-1)
+            {  page
+              .comment(comment[Math.floor(Math.random() * comment.length)])
+            }
+            else{
+              page
+              .noComment()
+            }
+          });
+        }
+      });
+      }
+      page
+      .logout()
   }
 }
-  client
+  page
   .end()
 });
     }

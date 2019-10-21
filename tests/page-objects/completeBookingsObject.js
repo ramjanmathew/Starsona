@@ -1,8 +1,11 @@
 module.exports = {
     url: "https://starsona-dev.qburst.build/",
     elements:{
-     loginButton: '#content-wrapper > div > div > header > div > div.header-actions.sc-hzDkRC.iMXiCh > button:nth-child(3)',
-      emailField:'input[name=email]',
+      loginButton: {
+        locateStrategy:'xpath',
+        selector:'//button[contains(text(),"Log In")]'
+       },
+       emailField:'input[name=email]',
       passwordField: 'input[name=password]',
       submitButton: 'button[type=submit]',
       bookingButton: {
@@ -58,7 +61,7 @@ module.exports = {
                             .pause(2000)
                             .setValue('@fileUpload', require('path').resolve(video))
                             .click('@bookingCompleteButton')
-                            .pause(50000) 
+                            .pause(22000)
                             .click('@bookingCloseButton')
                             .click('@logoutButton')
                 },
