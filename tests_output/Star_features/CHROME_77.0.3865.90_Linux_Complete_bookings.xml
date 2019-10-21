@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="Star_features.Complete_bookings"
+    errors="1" failures="0" hostname="" id="" package="Star_features" skipped="0"
+    tests="1" time="18.60" timestamp="">
+  
+    <testcase name="Complete Booking by star 1" classname="Star_features.Complete_bookings" time="18.60" assertions="0">
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

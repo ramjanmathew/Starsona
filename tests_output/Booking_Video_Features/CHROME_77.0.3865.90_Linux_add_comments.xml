@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="2"
+            failures="0"
+            tests="1">
+
+  <testsuite name="Booking_Video_Features.add_comments"
+    errors="2" failures="0" hostname="" id="" package="Booking_Video_Features" skipped="0"
+    tests="1" time="0.001000" timestamp="">
+  
+    <testcase name="Adding Comments to star videos" classname="Booking_Video_Features.add_comments" time="0.001000" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+      [0;31m  Error: Cannot read test source location: /home/rahul/Documents/Starsona-Automation/Nightwatch/tests/Comments.xlsx[0m
+[0;90m       at process._tickCallback (internal/process/next_tick.js:68:7)[0m
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>
